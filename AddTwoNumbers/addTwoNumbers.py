@@ -28,6 +28,7 @@ class LinkList:
         self.head = None
 
     def initList(self, data):
+        if (len(data) == 0) : return None
         self.head = ListNode(data[0])
         r = self.head
         p = self.head
@@ -41,6 +42,8 @@ class LinkList:
     def printList(self, head):
         if head:
             node = head
+        else:
+            return
         while node:
             print(node.val, end=' ')
             node = node.next
